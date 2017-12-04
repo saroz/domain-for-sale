@@ -1,36 +1,95 @@
 <?php
-// Fetching Values from URL.
-$name = $_POST['funnName'];
-$email = $_POST['emailAddress'];
-$contact = $_POST['mobileNumber'];
-$email = filter_var($email, FILTER_SANITIZE_EMAIL); // Sanitizing E-mail.
-// After sanitization Validation is performed
-if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-  if (!preg_match("/^[0-9]{10}$/", $contact)) {
-    echo "<span>Please enter valid contact number</span>";
-  } else {
-    $subject = $name;
-    // To send HTML mail, the Content-type header must be set.
-    $headers = 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-    $headers .= 'From:' . $email. "\r\n"; // Sender's Email
-    $headers .= 'Cc:' . $email. "\r\n"; // Carbon copy to Sender
-    $template = '<div style="padding:50px; color:white;">Hello ' . $name . ',<br/>'
-    . '<br/>Thank you...!<br/><br/>'
-    . 'Name:' . $name . '<br/>'
-    . 'Email:' . $email . '<br/>'
-    . 'Contact No:' . $contact . '<br/>'
-    . 'This is a contact confirmation mail.'
-    . '<br/>'
-    . 'We Will contact You as soon as possible .</div>';
-    $sendmessage = "<div style=\"background-color:#7E7E7E; color:white;\">" . $template . "</div>";
-    // Message lines should not exceed 70 characters (PHP rule), so wrap it.
-    $sendmessage = wordwrap($sendmessage, 70);
-    // Send mail by PHP Mail Function.
-    mail("the.saroz@gmail.com", $subject, $sendmessage, $headers);
-    echo "Your query has been received, We will contact you soon.";
-  }
-} else {
-  echo "<span>Invalid email</span>";
-}
+
+	if (isset($_POST['email'])) {
+
+		// EDIT THE 2 LINES BELOW AS REQUIRED
+		$email_to = "the.saroz@gmail.com";
+		$email_subject = "My offer for fifa-russia";
+
+
+		$name = $_POST['name']; // required
+		$email_from = $_POST['email']; // required
+		$telephone = $_POST['phone']; // not required
+		$price = $_POST['price']; // not required
+		$comments = $_POST['comments']; // required
+
+
+		$email_message = "Form details below.\n\n";
+
+		function clean_string($string) {
+				$bad = array("content-type", "bcc:", "to:", "cc:", "href");
+				return str_replace($bad, "", $string);
+		}
+
+		$email_message .= "Name: " . clean_string($name) . "\n";
+		$email_message .= "Email: " . clean_string($email_from) . "\n";
+		$email_message .= "Telephone: " . clean_string($telephone) . "\n";
+		$email_message .= "Price($): " . clean_string($price) . "\n";
+		$email_message .= "Comments: " . clean_string($comments) . "\n";
+
+		// create email headers
+		$headers = 'From: ' . $email_from . "\r\n" .
+						'Reply-To: ' . $email_from . "\r\n" .
+						'X-Mailer: PHP/' . phpversion();
+		@mail($email_to, $email_subject, $email_message, $headers);
+
 ?>
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+				<meta charset="utf-8">
+				<title>Sales Inquery || Fifa-Russia</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+				<link href="https://fonts.googleapis.com/css?family=Mukta+Mahee:300,700" rel="stylesheet">
+				<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+				<link rel="stylesheet" href="css/style.css" />
+		</head>
+		<body>
+			<section class="bg-alt hero p-0">
+				<div class="container-fluid">
+					<div class="row">
+							<div class="bg-faded col-sm-6 text-center col-fixed">
+									<div class="vMiddle">
+										<h1 class="pt-4 h2">
+											<span>Thak you for offer, I will contact as soon as possible. Cheers !!!</span>
+										</h1>
+										<div class="row d-md-flex text-center justify-content-center text-primary action-icons">
+											<div class="col-sm-4">
+												<p><em class="ion-ios-telephone-outline icon-md"></em></p>
+												<p class="lead"><a href="tel:+977(985)-117-6208">+977 (985)-117-6208</a></p>
+											</div>
+											<div class="col-sm-4">
+												<p><em class="ion-ios-chatbubble-outline icon-md"></em></p>
+												<p class="lead"><a href="mailto:the.saroz@gmail.com">the.saroz@gmail.com</a></p>
+											</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 offset-sm-6 px-0">
+									<section class="bg-alt">
+											<div class="row height-100">
+													<div class="col-sm-8 offset-sm-2 mt-2">
+														<h1 class="pt-4 h2"><span class="text-green">Saroj Kumar Poddar</span></h1>
+														<span class="text-muted">Kathmandu, Nepal</span>
+														<p><span>UX/UI Designer & Front-end Developer</span></p>
+														<p>&nbsp;</p>
+														<ul class="list-group">
+															<li class="list-group-item disabled">Other domains</li>
+															<li class="list-group-item">fifa2018-schedule.com</li>
+															<li class="list-group-item">fifaworldcup-schedule.com</li>
+															<li class="list-group-item">bazzar.xyz</li>
+														</ul>
+														<p>&nbsp;</p>
+														<p>&nbsp;</p>
+													</div>
+											</div>
+									</section>
+							</div>
+					</div>
+				</div>
+			</section>
+		</body>
+</html>
+<?php } ?>
