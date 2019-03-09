@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Sales Inquery || Fifa-Russia</title>
+        <title>Sales Inquery || Your Domain</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -20,7 +20,7 @@
                     <div class="col-sm-6 bg-faded text-center col-fixed">
                         <div class="vMiddle">
                           <h1 class="pt-4 h2">
-                              <span class="text-green">Fifa-russia.com</span>
+                              <span class="text-green">yourdomain[dot]com</span>
                               <small>available for sale</small>
                           </h1>
                           <p class="mt-4">
@@ -28,8 +28,18 @@
                           </p>
                           <div class="pt-5">
                               <label for="name">
-                              <a class="btn text-white bg-green btn-lg">My Price for $2999</a>
+                              <a class="btn text-white bg-green btn-lg">Buy now for $4999</a>
                               </label>
+                          </div>
+                          <div class="row d-md-flex text-center justify-content-center text-primary action-icons">
+                              <div class="col-sm-4">
+                                  <p><em class="ion-ios-telephone-outline icon-md"></em></p>
+                                  <p class="lead"><a href="tel:+xxx(xxx)-xxx-xx">+xxx(xxx)-xxx-xx</a></p>
+                              </div>
+                              <div class="col-sm-4">
+                                  <p><em class="ion-ios-chatbubble-outline icon-md"></em></p>
+                                  <p class="lead"><a href="mailto:nepal@example.com">nepal@example.com</a></p>
+                              </div>
                           </div>
                       </div>
                     </div>
@@ -38,7 +48,7 @@
                             <div class="container">
                                 <div class="row height-100">
                                     <div class="col-sm-10 offset-sm-1 mt-2">
-                                        <form id="main-offer-form" action="contact.php" method="POST">
+                                        <form id="main-offer-form" action="contact.php" method="post">
                                             <h2 class="text-primary">Interested in this domain?</h2>
                                             <hr/>
                                             <div class="form-group">
@@ -84,7 +94,7 @@
                                                 <textarea name="comments" class="form-control" placeholder="Message (optional)"></textarea>
                                             </div>
                                             <div class="form-group">
-                                              <div class="g-recaptcha" data-sitekey="6LcDYy8UAAAAAIj1_yWDePD2pAKlBOLJjItCSKHo"></div>
+                                              <div class="g-recaptcha" data-sitekey="xxxxxxxxxxxxxxx"></div>
                                               <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
                                             </div>
 
@@ -98,8 +108,8 @@
                 </div>
             </div>
         </section>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
         <script>
           $( "#main-offer-form" ).validate({
             errorClass: 'form-control-feedback',
@@ -110,7 +120,6 @@
             unhighlight: function(element) {
               $(element).parents(".form-group").removeClass("has-danger");
             },
-            ignore: ".ignore",
             rules: {
                 name: 'required',
                 email: {
@@ -124,16 +133,7 @@
                 },
                 price: "required",
                 comments: {
-                  maxlength: 255
-                },
-                hiddenRecaptcha: {
-                   required: function() {
-                       if(grecaptcha.getResponse() == '') {
-                           return true;
-                       } else {
-                           return false;
-                       }
-                   }
+                  maxlength: 500
                 }
               },
               messages: {
@@ -152,23 +152,10 @@
                   price: 'Please enter offered price.'
                 },
                 comments: {
-                  maxlength: 'Message length must be less than 255 character.'
-                },
-                hiddenRecaptcha: {
-                  required: 'Captcha validation is required.'
+                  maxlength: 'Message length must be less than 500 character.'
                 }
               }
           });
-        </script>
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-98754644-1', 'auto');
-          ga('send', 'pageview');
-
         </script>
     </body>
 </html>

@@ -3,8 +3,8 @@
 	if (isset($_POST['email'])) {
 
 		// EDIT THE 2 LINES BELOW AS REQUIRED
-		$email_to = "the.saroz@gmail.com";
-		$email_subject = "My offer for fifa-russia";
+		$email_to = "hey@sarozpoddar.com.np";
+		$email_subject = "My offer for Domain Name";
 
 
 		$name = $_POST['name']; // required
@@ -38,7 +38,7 @@
 <html lang="en">
 		<head>
 				<meta charset="utf-8">
-				<title>Sales Inquery || Fifa-Russia</title>
+				<title>Sales Inquery || Your Domain</title>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
 				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -61,7 +61,7 @@
 											</div>
 											<div class="col-sm-4">
 												<p><em class="ion-ios-chatbubble-outline icon-md"></em></p>
-												<p class="lead"><a href="mailto:the.saroz@gmail.com">the.saroz@gmail.com</a></p>
+												<p class="lead"><a href="mailto:the.saroz@gmail.com">hey@sarozpoddar.com.np</a></p>
 											</div>
 									</div>
 								</div>
@@ -70,18 +70,9 @@
 									<section class="bg-alt">
 											<div class="row height-100">
 													<div class="col-sm-8 offset-sm-2 mt-2">
-														<h1 class="pt-4 h2"><span class="text-green">Saroj Kumar Poddar</span></h1>
-														<span class="text-muted">Kathmandu, Nepal</span>
+														<h1 class="pt-4 h2"><span class="text-green">Saroz Poddar</span></h1>
+														<span class="text-muted">Nepal</span>
 														<p><span>UX/UI Designer & Front-end Developer</span></p>
-														<p>&nbsp;</p>
-														<ul class="list-group">
-															<li class="list-group-item disabled">Other domains</li>
-															<li class="list-group-item">fifa2018-schedule.com</li>
-															<li class="list-group-item">fifaworldcup-schedule.com</li>
-															<li class="list-group-item">bazzar.xyz</li>
-														</ul>
-														<p>&nbsp;</p>
-														<p>&nbsp;</p>
 													</div>
 											</div>
 									</section>
