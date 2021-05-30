@@ -58,10 +58,11 @@
 										<div class="row d-md-flex text-center justify-content-center text-primary action-icons">
 											<div class="col-sm-4">
 												<p><em class="ion-ios-telephone-outline icon-md"></em></p>
+												<p class="lead"><a href="tel:+[Your Phone]">+[Your Phone]</a></p>
 											</div>
 											<div class="col-sm-4">
 												<p><em class="ion-ios-chatbubble-outline icon-md"></em></p>
-												<p class="lead"><a href="mailto:the.saroz@gmail.com">hey@sarozpoddar.com.np</a></p>
+												<p class="lead"><a href="mailto:hello@example.com">email@[Your Domain].com</a></p>
 											</div>
 									</div>
 								</div>
@@ -70,9 +71,11 @@
 									<section class="bg-alt">
 											<div class="row height-100">
 													<div class="col-sm-8 offset-sm-2 mt-2">
-														<h1 class="pt-4 h2"><span class="text-green">Saroz Poddar</span></h1>
-														<span class="text-muted">Nepal</span>
-														<p><span>UX/UI Designer & Front-end Developer</span></p>
+														<h1 class="pt-4 h2"><span class="text-green">Saroj K. Poddar</span></h1>
+														<span class="text-muted">Kathmandu, Nepal</span>
+														<p><span>Web Strategist, Front-end Developer & UX/ UI Designer</span></p>
+														<br/>
+														<a target="_blank" rel="nofollow" href="https://sarozpoddar.com.np">sarozpoddar.com.np</a>
 													</div>
 											</div>
 									</section>
