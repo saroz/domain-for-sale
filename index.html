@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css?family=Mukta+Mahee:300,700" rel="stylesheet">
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
         <link rel="stylesheet" href="css/style.css" />
-        <script src='https://www.google.com/recaptcha/api.js'></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     </head>
     <body>
@@ -94,8 +94,7 @@
                                                 <textarea name="comments" class="form-control" placeholder="Message (optional)"></textarea>
                                             </div>
                                             <div class="form-group">
-                                              <div class="g-recaptcha" data-sitekey="xxxxxxxxxxxxxxx"></div>
-                                              <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
+                                              <div id="recaptcha" class="g-recaptcha" data-sitekey="6Lc_sf8aAAAAAFk3KIcYvqcIoo1HeCOZu4faK3DA" data-callback="onSubmit" data-size="invisible"></div>
                                             </div>
 
                                             <button type="submit" class="btn text-white btn-lg bg-primary btn-block">Make an offer</button>
