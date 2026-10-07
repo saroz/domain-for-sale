@@ -1,0 +1,174 @@
+{
+  "repo_notes": [
+    {
+      "content": ""
+    }
+  ],
+  "pages": [
+    {
+      "title": "Overvieww",
+      "purpose": "Introduce the Domain For Sale landing page project: purpose (let prospective buyers submit offers for a domain), the static HTML + PHP mail architecture, file inventory, and links to child pages.",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Getting Started & Configuration",
+      "purpose": "How to clone, host on a PHP-capable web server, and replace placeholders (page title, price, email, phone, owner name) in index.html and contact.php. Includes reCAPTCHA key setup.",
+      "parent": "Overview",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Request & Offer Flow",
+      "purpose": "End-to-end flow: visitor loads index.html, client-side validation, reCAPTCHA, POST to contact.php, sanitization, mail() dispatch, confirmation page render.",
+      "parent": "Overview",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Frontend Landing Page",
+      "purpose": "Overview of the client-side layer: markup structure, styling, and client-side scripts. Links to child pages.",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "index.html Structure & Offer Form",
+      "purpose": "Detail the two-column hero layout, branding/contact panel, pricing CTA, and the #main-offer-form fields (name, email, phone, price, comments) and their attributes.",
+      "parent": "Frontend Landing Page",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Styling System (css/style.css)",
+      "purpose": "Typography (Mukta Mahee), .hero/.height-100/.col-fixed layout geometry, form-control styling, color & icon utility classes, button variants, responsive breakpoints.",
+      "parent": "Frontend Landing Page",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Client-Side Validation",
+      "purpose": "How jQuery Validate is configured against #main-offer-form: rules, messages, highlight/unhighlight hooks, .has-danger and form-control-feedback error rendering.",
+      "parent": "Frontend Landing Page",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "jQuery Validate Plugin Internals",
+      "purpose": "Reference on the bundled js/jquery.validate.min.js: $.fn.validate, a.validator, rule resolution, built-in methods, remote/pending state, errorMap/errorList.",
+      "parent": "Frontend Landing Page",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Bundled jQuery Library",
+      "purpose": "Role of js/jquery.min.js (v1.10.2): global $/jQuery, Sizzle selectors, event dispatch, Deferred, AJAX — and why it is vendored locally.",
+      "parent": "Frontend Landing Page",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "PHP Backend",
+      "purpose": "Overview of the server-side components that process offer submissions and verify bot challenges. Links to child pages.",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "contact.php Submission Handler",
+      "purpose": "POST parameter extraction, clean_string sanitization against header injection, email body/header assembly, mail() dispatch, and the HTML confirmation view it renders.",
+      "parent": "PHP Backend",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "reCAPTCHA Verification Library",
+      "purpose": "ReCaptcha and ReCaptchaResponse classes in recaptchalib.php: secret handling, _encodeQS, _submitHTTPGet to siteverify, JSON response parsing, missing-input short-circuit.",
+      "parent": "PHP Backend",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Security Considerations",
+      "purpose": "Header-injection sanitization limits, suppressed mail errors (@mail), hardcoded recipient and site keys, client-vs-server validation gaps, and whether reCAPTCHA is actually enforced server-side.",
+      "parent": "PHP Backend",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Project Meta",
+      "purpose": "Non-code assets: documentation and licensing. Links to child pages.",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Documentation (README)",
+      "purpose": "Content and intent of README.md: feature claims, deployment phases, configuration checklist.",
+      "parent": "Project Meta",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "License & Attribution",
+      "purpose": "MIT License terms (Copyright 2021 Saroz Poddar), redistribution conditions, warranty disclaimer, and attribution of CDN-hosted third-party assets.",
+      "parent": "Project Meta",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Glossary",
+      "purpose": "Define codebase-specific terms with code pointers: #main-offer-form, clean_string, ReCaptcha/ReCaptchaResponse, siteverify, missing-input, .col-fixed, .hero, .vMiddle, .bg-faded, .has-danger, form-control-feedback, onSubmit callback, g-recaptcha, validator instance, errorMap/errorList, normalizer, dependency-mismatch, Sizzle, Deferred, Mukta Mahee, Ionicons, Animate.css, btn-radius, icon-lg/md/sm, purchaser, Instant Purchase CTA.",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    }
+  ]
+}
